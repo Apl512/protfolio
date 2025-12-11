@@ -122,7 +122,7 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
     const originalText = button.textContent;
     
     try {
-        button.textContent = 'Enviando...';
+        button.textContent = 'Sending...';
         button.disabled = true;
         
         const response = await fetch(form.action, {
@@ -134,13 +134,13 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
         });
         
         if (response.ok) {
-            alert('¡Gracias por tu mensaje! Te contactaré pronto.');
+            alert('Thank you for your message! I will contact you soon.');
             form.reset();
         } else {
-            alert('Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.');
+            alert('There was an error sending the message. Please try again.');
         }
     } catch (error) {
-        alert('Hubo un error al enviar el mensaje. Por favor, intenta de nuevo.');
+        alert('There was an error sending the message. Please try again.');
     } finally {
         button.textContent = originalText;
         button.disabled = false;
