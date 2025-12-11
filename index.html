@@ -182,23 +182,23 @@
         <div class="container">
             <h2 class="section-title">Proyects</h2>
             <div class="projects-grid">
-                <!--
-                    <div class="project-card">
-                        <div class="project-image">
-                            <div class="project-overlay">
-                                <a href="#" class="project-link">Ver Detalles</a>
-                            </div>
-                        </div>
-                        <div class="project-info">
-                            <h3>Proyecto 1</h3>
-                            <p>RPG de acción con sistema de combate dinámico desarrollado en Unity</p>
-                            <div class="project-tags">
-                                <span class="tag">Unity</span>
-                                <span class="tag">C#</span>
-                                <span class="tag">3D</span>
-                            </div>
+                <div class="project-card">
+                    <div class="project-image space-invaders-bg">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" onclick="openVideoModal(event)">Ver Detalles</a>
                         </div>
                     </div>
+                    <div class="project-info">
+                        <h3>Space Invaders</h3>
+                        <p>Recreation of the legendary arcade game Space Invaders in the ESAT graphics library.</p>
+                        <div class="project-tags">
+                            <span class="tag">ESAT_rev248</span>
+                            <span class="tag">C++</span>
+                            <span class="tag">2D</span>
+                        </div>
+                    </div>
+                </div>
+                <!--
                     <div class="project-card">
                         <div class="project-image">
                             <div class="project-overlay">
@@ -273,6 +273,24 @@
     <footer class="footer">
         <p>&copy; 2025 Adam Puche Lioubavina. All rights reserved.</p>
     </footer>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeVideoModal()">&times;</span>
+            <h3>Space Invaders - Demo</h3>
+            <div class="video-container">
+                <video 
+                    id="videoPlayer"
+                    controls
+                    preload="metadata">
+                    <source src="videos/space_invaders.mp4" type="video/mp4">
+                    <source src="videos/space-invaders.webm" type="video/webm">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>

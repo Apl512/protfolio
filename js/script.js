@@ -167,3 +167,43 @@ document.addEventListener('mousemove', (e) => {
     
     setTimeout(() => trail.remove(), 500);
 });
+
+// Video Modal Functions
+function openVideoModal(event) {
+    event.preventDefault();
+    const modal = document.getElementById('videoModal');
+    const videoPlayer = document.getElementById('videoPlayer');
+    
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    
+    // Reproducir el video cuando se abra el modal
+    videoPlayer.play();
+}
+
+function closeVideoModal() {
+    const modal = document.getElementById('videoModal');
+    const videoPlayer = document.getElementById('videoPlayer');
+    
+    modal.classList.remove('active');
+    
+    // Pausar y reiniciar el video
+    videoPlayer.pause();
+    videoPlayer.currentTime = 0;
+    
+    document.body.style.overflow = 'auto';
+}
+
+// Cerrar modal al hacer click fuera del contenido
+document.getElementById('videoModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeVideoModal();
+    }
+});
+
+// Cerrar modal con la tecla Escape
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeVideoModal();
+    }
+});
