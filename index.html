@@ -185,7 +185,7 @@
                 <div class="project-card">
                     <div class="project-image space-invaders-bg">
                         <div class="project-overlay">
-                            <a href="#" class="project-link" onclick="openVideoModal(event)">Ver Detalles</a>
+                            <a href="#" class="project-link" onclick="openVideoModal(event)">View Details</a>
                         </div>
                     </div>
                     <div class="project-info">
@@ -244,27 +244,13 @@
                 <div class="contact-info">
                     <h3>¡Let's work together!</h3>
                     <p>I am available for freelance projects and job opportunities in video game development.</p>
-                    <div class="contact-items">
-                        <div class="contact-item">
-                            <span class="contact-icon">📧</span>
-                            <a href="mailto:pucheli@esat-alumni.com">pucheli@esat-alumni.com</a>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📱</span>
-                            <a href="tel:+34654205448">+34 654 20 54 48</a>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-icon">📍</span>
-                            <span>Valencia, Spain</span>
-                        </div>
-                    </div>
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xanrlobz" method="POST">
+                        <input type="text" name="nombre" placeholder="Your nombre" required>
+                        <input type="email" name="email" placeholder="Your email" required>                
+                        <textarea name="mensaje" placeholder="Your mensaje" rows="5" required></textarea>                
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </form>
                 </div>
-                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xanrlobz" method="POST">
-                    <input type="text" name="nombre" placeholder="Your nombre" required>
-                    <input type="email" name="email" placeholder="Your email" required>                
-                    <textarea name="mensaje" placeholder="Your mensaje" rows="5" required></textarea>                
-                  <button type="submit" class="btn btn-primary">Send</button>
-                </form>
             </div>
         </div>
     </section>
